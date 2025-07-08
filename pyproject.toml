@@ -1,0 +1,40 @@
+[project]
+name = "spire-doc-mcp-server"
+version = "1.0.0"
+description = "MCP server for Word document manipulation using Spire.Doc"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "mcp[cli]>=1.2.0",
+    "Spire.Doc.Free>=12.12.0"
+]
+
+[[project.authors]]
+name = "e-iceblue"
+email = "sales@e-iceblue.com"
+
+[project.urls]
+Homepage = "https://www.e-iceblue.com/"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+spire-doc-mcp-server = "spire_doc_mcp.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/spire_doc_mcp"]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+asyncio_mode = "auto"
