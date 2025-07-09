@@ -1,20 +1,21 @@
-﻿# Spire.Doc MCP Server
+# What's Spire.Doc MCP Server ?
 
-A Model Context Protocol (MCP) server that lets you manipulate Word documents without needing Microsoft Word installed. Create, read, and modify Word documents with your AI agent.
+Spire.Doc MCP Server is a Model Context Protocol (MCP) server that enables you to manipulate Word documents without requiring Microsoft Word. With it, you can [create](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Create-Word-Document.html), [read](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/read-word-doc-or-docx-files-in-python.html), and [modify](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Edit-or-Modify-a-Word-Document.html) Word documents directly using your AI agent.
+
 
 ## Key Features
 
-- Create and modify Word documents
-- Convert document formats
-- Read and write document content
+- [Create Word documents from Scratch](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Create-Word-Document.html)
+- [Modify existing Word files](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Edit-or-Modify-a-Word-Document.html) Word documents
+- Convert [Word to PDF](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Word-to-PDF.html), [Word to Images](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Word-to-Images.html), and more with high fidelity
+- [Read](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/read-word-doc-or-docx-files-in-python.html) and [write document content](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Create-Word-Document.html/)
 - Apply formatting and styles
 - Analyze document content
-- Convert Word file formats
-- Table operations and management
-- Paragraph manipulation and formatting
-- Document protection and security
-- Document comparison and merging
-- Text watermark support
+- [Table operations and management](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Table/Python-Create-Tables-in-a-Word-Document.html)
+- [Paragraph manipulation and formatting](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Create-Word-Document.html#4)
+- [Document protection and security](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Security/Python-Encrypt-or-Decrypt-Word-Documents.html)
+- [Document comparison](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Compare-Two-Versions-of-a-Word-Document.html) and [merging](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Merge-Word-Documents.html)
+- [Text watermark](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Watermark/Python-Insert-Watermarks-in-Word.html) support
 
 ## Quick Start
 
@@ -25,12 +26,14 @@ A Model Context Protocol (MCP) server that lets you manipulate Word documents wi
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/eiceblue/spire-doc-mcp-server.git
 cd spire-doc-mcp-server
 ```
 
 2. Install using uv:
+
 ```bash
 uv pip install -e .
 ```
@@ -38,6 +41,7 @@ uv pip install -e .
 ### Running the Server
 
 Start the server (default port 8000):
+
 ```bash
 uv run spire-doc-mcp-server
 ```
@@ -57,6 +61,7 @@ $env:SPIRE_DOC_MCP_PORT = "8080"; uv run spire-doc-mcp-server
 ### Cursor IDE
 
 1. Add this configuration to Cursor:
+
 ```json
 {
   "mcpServers": {
@@ -83,6 +88,7 @@ $env:SPIRE_DOC_MCP_PORT = "8080"; uv run spire-doc-mcp-server
 The server provides **18 tools** organized into 5 categories:
 
 ### Document Operations (6 tools)
+
 - **create_document**: Create new Word documents with optional templates
 - **set_document_protection**: Apply password protection to documents
 - **find_and_replace**: Search and replace text in documents
@@ -90,6 +96,7 @@ The server provides **18 tools** organized into 5 categories:
 - **add_text_watermark**: Add text watermarks to documents
 
 ### Paragraph Operations (5 tools)
+
 - **get_paragraph_text**: Retrieve text content from paragraphs
 - **delete_paragraph**: Remove paragraphs from documents
 - **get_paragraph_info**: Get detailed paragraph information
@@ -97,6 +104,7 @@ The server provides **18 tools** organized into 5 categories:
 - **update_paragraph_text**: Modify paragraph text content
 
 ### Table Operations (6 tools)
+
 - **create_table**: Create new tables with specified dimensions
 - **add_table_after_paragraph**: Insert tables after specific paragraphs
 - **add_table_to_section**: Add tables to the end of sections
@@ -105,10 +113,12 @@ The server provides **18 tools** organized into 5 categories:
 - **set_cell_text**: Set text content in table cells
 
 ### Formatting Operations (2 tools)
+
 - **format_paragraph**: Apply formatting to paragraphs (alignment, indentation, spacing)
 - **get_paragraph_format**: Retrieve paragraph formatting information
 
 ### Conversion Operations (3 tools)
+
 - **convert_document**: Convert documents between different formats
 - **get_conversion_status**: Check conversion operation status
 - **get_conversion_history**: View conversion history
@@ -116,6 +126,7 @@ The server provides **18 tools** organized into 5 categories:
 ## Supported Formats
 
 ### Input Formats
+
 - **DOC**: Microsoft Word 97-2003 Document
 - **DOCX**: Microsoft Word 2007+ Document
 - **DOCM**: Microsoft Word 2007+ Macro-Enabled Document
@@ -124,20 +135,22 @@ The server provides **18 tools** organized into 5 categories:
 - **DOTM**: Microsoft Word 2007+ Macro-Enabled Template
 
 ### Output Formats
+
 - **DOC**: Microsoft Word 97-2003 Document
 - **DOCX**: Microsoft Word 2007+ Document
-- **PDF**: Portable Document Format
-- **RTF**: Rich Text Format
-- **HTML**: HyperText Markup Language
-- **TXT**: Plain Text
-- **EPUB**: Electronic Publication
+- **[PDF](https://https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Word-to-PDF.html)**: Portable Document Format
+- **[RTF](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Word-to-RTF-and-Vice-Versa.html)**: Rich Text Format
+- **[HTML](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Word-to-HTML.html)**: HyperText Markup Language
+- **[TXT](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Text-to-Word-or-Word-to-Text.html)**: Plain Text
+- **[EPUB](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Word-to-EPUB.html)**: Electronic Publication
 - **ODT**: OpenDocument Text
-- **XML**: Extensible Markup Language
-- **Markdown**: Markdown Format
+- **[XML](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Word-to-XML-Word-XML.html)**: Extensible Markup Language
+- **[Markdown](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Markdown-to-Word-or-Word-to-Markdown.html)**: Markdown Format
 
 ## Development
 
 ### Project Structure
+
 ```
 spire-doc-mcp-server/
 ├── src/spire_doc_mcp/
@@ -173,6 +186,7 @@ uv run pytest
 ### Code Quality
 
 The project follows Python best practices:
+
 - Type hints throughout
 - Comprehensive error handling
 - Consistent code formatting
@@ -200,6 +214,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 For support and questions:
+
 - Check the [TOOLS.md](TOOLS.md) documentation
 - Review the error handling section
 - Open an issue on GitHub
@@ -210,3 +225,4 @@ For support and questions:
 - Complete Word document manipulation capabilities
 - Comprehensive error handling
 - Full format conversion support
+
