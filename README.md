@@ -6,7 +6,7 @@ Spire.Doc MCP Server is a Model Context Protocol (MCP) server that enables you t
 ## Key Features
 
 - [Create Word documents from Scratch](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Create-Word-Document.html)
-- [Modify existing Word files](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Edit-or-Modify-a-Word-Document.html) Word documents
+- [Modify existing Word files](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Edit-or-Modify-a-Word-Document.html)
 - Convert [Word to PDF](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Word-to-PDF.html), [Word to Images](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Conversion/Python-Convert-Word-to-Images.html), and more with high fidelity
 - [Read](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/read-word-doc-or-docx-files-in-python.html) and [write document content](https://www.e-iceblue.com/Tutorials/Python/Spire.Doc-for-Python/Program-Guide/Document-Operation/Python-Create-Word-Document.html/)
 - Apply formatting and styles
